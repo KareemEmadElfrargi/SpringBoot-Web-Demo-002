@@ -14,10 +14,10 @@ public class HomeController {
     @RequestMapping("/")
     public String home() {
         System.out.println("Called Home page");
-        return "html/index";
+        return "html/index2";
     }
 
-    @RequestMapping("submitForm")
+    @RequestMapping("add")
     public ModelAndView add(
             @RequestParam("numberOne")
             int number1,
@@ -31,6 +31,26 @@ public class HomeController {
 
         modelAndView.addObject("result", result);
         modelAndView.setViewName("html/result");
+
+
+        return modelAndView;
+
+    }
+    @RequestMapping("addAlien")
+    public ModelAndView addAlien(
+            @RequestParam("aid")
+            int idAlien,
+            @RequestParam("aname")
+            String nameAlien, ModelAndView modelAndView) {
+        System.out.println("Called result page");
+
+        Alien alien = new Alien();
+        alien.setId(idAlien);
+        alien.setName(nameAlien);
+
+
+        modelAndView.addObject("alien",alien);
+        modelAndView.setViewName("html/result2");
 
 
         return modelAndView;
