@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Result Page</h1>
-        <p>Result is ${resultX} </p>
+        <p>Result is ${result} </p>
 
     </body>
 </html>
