@@ -1,30 +1,34 @@
 package com.kareem.SpringBoot_Web_Demo_002;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 public class Alien {
-    private int id;
-    private String name;
 
-    public int getId() {
-        return id;
+    private int aid;
+    private String aname;
+
+    public int getAid() {
+        return aid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAid(int aid) {
+        this.aid = aid;
     }
 
-    public String getName() {
-        return name;
+
+    public String getAname() {
+        return aname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAname(String aname) {
+        this.aname = aname;
     }
 
     @Override
     public String toString() {
         return "Alien{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "aid=" + aid +
+                ", name='" + aname + '\'' +
                 '}';
     }
 }

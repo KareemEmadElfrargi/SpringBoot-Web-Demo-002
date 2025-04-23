@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Result Page</h1>
-        <p>${alien}</p>
+        <p>${alien1}</p>
 
     </body>
 </html>
