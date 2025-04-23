@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
-// Video 203
 @Controller
 public class HomeController {
 
@@ -18,18 +18,22 @@ public class HomeController {
     }
 
     @RequestMapping("submitForm")
-    public String add(@RequestParam("numberOne")
-                      int number1,
-                      @RequestParam("numberTwo")
-                      int number2, Model model) {
+    public ModelAndView add(
+            @RequestParam("numberOne")
+            int number1,
+            @RequestParam("numberTwo")
+            int number2, ModelAndView modelAndView) {
+
         System.out.println("Called result page");
 
         int result = number1 + number2;
         System.out.println(result);
-        model.addAttribute("result",result);
+
+        modelAndView.addObject("result", result);
+        modelAndView.setViewName("html/result");
 
 
-        return "html/result";
+        return modelAndView;
 
     }
 }
