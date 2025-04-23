@@ -1,5 +1,7 @@
 package com.kareem.SpringBoot_Web_Demo_002;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,7 +11,21 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home() {
-        System.out.println("HomeController.home() called");
-        return "index.jsp";
+        System.out.println("Called Home page");
+        return "html/index.jsp";
+    }
+    @RequestMapping("submitForm")
+    public String add(HttpServletRequest request , HttpSession session){
+        System.out.println("Called result page");
+        int numberOne = Integer.parseInt(request.getParameter("num1"));
+        int numberTwo = Integer.parseInt(request.getParameter("num2"));
+        int result = numberOne + numberTwo;
+        System.out.println(result);
+
+        session.setAttribute("resultX",result);
+
+
+        return "html/result.jsp";
+
     }
 }
