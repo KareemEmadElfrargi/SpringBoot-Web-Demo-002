@@ -8,7 +8,6 @@ This project allows users to:
 - Submit a form with `aid` and `aname` (Alien ID and name).
 - Automatically bind form data to a Java object (`Alien` class).
 - Display the submitted data on a result page using JSP and Model Attributes.
-- Demonstrates basic addition using form parameters (`numberOne`, `numberTwo`) and displays the result.
 
 ## 🛠️ Technologies Used
 
