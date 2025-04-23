@@ -15,10 +15,9 @@ public class HomeController {
         return "html/index.jsp";
     }
     @RequestMapping("submitForm")
-    public String add(HttpServletRequest request , HttpSession session){
+    public String add(int numberOne , int numberTwo , HttpSession session){
         System.out.println("Called result page");
-        int numberOne = Integer.parseInt(request.getParameter("num1"));
-        int numberTwo = Integer.parseInt(request.getParameter("num2"));
+
         int result = numberOne + numberTwo;
         System.out.println(result);
 

@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Result Page</h1>
-        <p>Result is <%= session.getAttribute("resultX") %></p>
+        <p>Result is ${resultX} </p>
 
     </body>
 </html>
