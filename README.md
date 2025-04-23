@@ -19,25 +19,20 @@ This project allows users to:
 - Tomcat (Embedded)
 - HTML & CSS
 
+## 🧑‍🚀 Alien Form Submission
 
-🧑‍🚀 Alien Form Submission
-URL: /addAlien
+- **URL**: `/addAlien`
+- **HTTP Method**: `POST`
+- **Fields**:
+  - `aid` → Alien ID (integer)
+  - `aname` → Alien name (string)
+- **Result Page**: Displays the submitted Alien object and a hardcoded course name (`Java`).
 
-HTTP Method: POST
+## ➕ Simple Calculator
 
-Fields:
-
-aid → Alien ID (integer)
-
-aname → Alien name (string)
-
-Result Page: Displays the submitted Alien object and a hardcoded course name (Java).
-
-➕ Simple Calculator
-URL: /add
-
-HTTP Method: GET or POST
-
-Parameters: numberOne, numberTwo
-
-Result Page: Displays the sum of the two numbers
+- **URL**: `/add`
+- **HTTP Method**: `GET` or `POST`
+- **Parameters**:
+  - `numberOne` → First number (integer)
+  - `numberTwo` → Second number (integer)
+- **Result Page**: Displays the sum of the two numbers.
